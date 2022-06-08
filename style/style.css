@@ -40,3 +40,45 @@ p{
 .price{
   width: 15vw;
 }
+
+p{
+    text-transform: uppercase;
+}
+
+#buttons{
+    display: none;
+}
+
+#buttons button{
+    height: 10vh;
+    width: 20vw;
+    border: 1px solid #b5b5b5;
+    border-radius: 16px;
+    background: none;
+    transition: 500ms;
+}
+
+#buttons button:hover{
+    border: 1px solid black;
+}
+
+#buttons button:nth-child(1){
+    position: fixed;
+    top: 36.5%;
+    left: 52.5%;
+    transform: translate(-50%, -50%);
+}
+
+#buttons button:nth-child(2){
+    position: fixed;
+    top: 51%;
+    left: 52.5%;
+    transform: translate(-50%, -50%);
+}
+
+#buttons button:nth-child(3){
+    position: fixed;
+    top: 67.5%;
+    left: 52.5%;
+    transform: translate(-50%, -50%);
+}

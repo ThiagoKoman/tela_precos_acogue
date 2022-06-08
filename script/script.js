@@ -57,7 +57,7 @@ $( document ).ready(function() {
             if(indice === pages.length){
                 indice = 0;
             }  
-            $('#list').hide(1);
+            $('#list').hide();
             setTimeout(()=>{
                 document.getElementById("list").innerText = "";
                 for(let i = 0; i <pages[indice].length; i++){
@@ -71,7 +71,7 @@ $( document ).ready(function() {
                     $('#list').append(produto);
                 }
                 $('#list').show(); 
-            }, 1);
+            }, 0);
         }, 10000);
     }
 });

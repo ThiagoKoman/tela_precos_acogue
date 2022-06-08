@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+*{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-image: url('../img/acogue.jpeg');
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: 100% 100%;
+}
+
+p{
+    color: white;
+}
+
+#list{
+    list-style-type: none;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+#list li{
+    display: flex;
+    width: 80vw;
+    justify-content: space-between;
+    font-size: 48px;
+}
+
+#list li p {
+    margin: 12px;
+}
+
+.price{
+  width: 15vw;
+}

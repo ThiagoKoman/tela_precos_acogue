@@ -21,6 +21,8 @@ $( document ).ready(function() {
     let type = vars['type'];
     $.ajax({
         url: "https://mambohigienopolis.beeid.com.br/Produto/5", 
+        crossDomain: true,
+        type: 'GET',
         success: function(result){
             console.log(result);
             valor = result;

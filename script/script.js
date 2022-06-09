@@ -1,6 +1,7 @@
 //Separando as páginas da view
 let nPages = parseInt(dados.length / 10) + 1;
 let pages = [];
+let valor = null;
 for(let i = 0; i<nPages; i++){
    let page = dados.slice(i*10, (i+1)*10);
    pages.push(page);     
@@ -18,10 +19,16 @@ $( document ).ready(function() {
         vars[hash[0]] = hash[1];
     }
     let type = vars['type'];
-
+    $.ajax({
+        url: "https://mambohigienopolis.beeid.com.br/Produto/5", 
+        success: function(result){
+            console.log(result);
+            valor = result;
+    }});
     switch(type){
         case 'acougue':
             $('body').css('background-image', 'url("./img/acogue.jpeg")');
+            
             break;
         case 'peixaria':
             $('body').css('background-image', 'url("./img/peixaria.jpeg")');

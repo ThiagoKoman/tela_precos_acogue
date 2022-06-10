@@ -11,7 +11,7 @@ function requestData(id, type){
         crossDomain: true,
     }).done(function(msg){
         dados = msg;
-        nPages = parseInt(dados.length / 9) + 1;
+        nPages = parseInt(dados.length / 11) + 1;
         for(let i = 0; i<nPages; i++){
             let page = dados.slice(i*10, (i+1)*10);
             pages.push(page);     

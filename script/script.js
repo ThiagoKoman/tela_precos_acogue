@@ -11,7 +11,7 @@ function requestData(id, type){
         crossDomain: true,
     }).done(function(msg){
         dados = msg;
-        nPages = parseInt(dados.length / 10) + 1;
+        nPages = parseInt(dados.length / 9) + 1;
         for(let i = 0; i<nPages; i++){
             let page = dados.slice(i*10, (i+1)*10);
             pages.push(page);     
@@ -19,6 +19,7 @@ function requestData(id, type){
         if(type){
             generateFirstPage();
             if(pages.length > 1){
+                console.log(pages.length);
                 generateAllPages();
             }
         }    
@@ -34,7 +35,7 @@ function generateFirstPage(){
                 <li>
                     <p>${pages[0][i].descricao}</p>
                     <div class="price">
-                        <p>R$${parseFloat(pages[0][i].preco).toFixed(2)}</p>
+                        <p>R$ ${parseFloat(pages[0][i].preco).toFixed(2)}</p>
                     </div>
                 </li>`;
         $('#list').append(produto);
@@ -56,7 +57,7 @@ function generateAllPages(){
                         <li>
                             <p>${pages[indice][i].descricao}</p>
                             <div class="price">
-                                <p>R$${parseFloat(pages[indice][i].preco).toFixed(2)}</p>
+                                <p>R$ ${parseFloat(pages[indice][i].preco).toFixed(2)}</p>
                             </div>
                         </li>`;
                 $('#list').append(produto);

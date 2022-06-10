@@ -35,6 +35,7 @@ p{
 
 #list li p {
     margin: 12px;
+    text-align: right;
 }
 
 .price{
